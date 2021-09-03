@@ -1,0 +1,11 @@
+UPDATE vendedores set Nome = 'João Antonio'
+where Matricula = '123.456';
+Select * from vendedores;
+
+UPDATE vendedores set Nome = 'João Lucas'
+where Matricula = '123339';
+
+Insert into vendedores (Nome, Matricula, comissao) values
+("Lucas", "000.000",0)
+
+Delete from vendedores where Nome = 'Lucas'
