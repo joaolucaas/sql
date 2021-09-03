@@ -1,0 +1,20 @@
+create table vendedores (
+Nome varchar(50),
+matricula varchar(7),
+comissao float );
+
+select * from vendedores;
+
+insert into vendedores
+(Nome, matricula, comissao) values
+('Bariri','123.456',1.90);
+
+insert into vendedores
+(Nome, matricula, comissao) values
+('Allan','123.321',1.80);
+
+insert into vendedores
+(Nome, matricula, comissao) values
+('Miguel','111.111',1.70);
+
+DROP table tabela_de_vendedores;
