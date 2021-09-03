@@ -1,0 +1,5 @@
+ALTER TABLE vendedores 	ADD COLUMN (DATA_NASCIMENTO DATE);
+SELECT * FROM VENDEDORES;
+
+UPDATE VENDEDORES set Data_nascimento = '1995-11-14'
+where matricula = '123339';
