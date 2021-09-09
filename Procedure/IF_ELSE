@@ -1,0 +1,10 @@
+CREATE PROCEDURE `testa_numero_notas`(Vdata DATE)
+BEGIN
+	DECLARE Vquantidade INT;
+	SELECT COUNT(*) INTO Vquantidade FROM notas_fiscais WHERE data_venda = Vdata;
+		IF Vquantidade > 70 THEN 
+		SELECT "muita nota " AS `VOLUME`;
+		ELSE
+		SELECT "Pouca nota" AS `VOLUME`;
+		END IF;
+END
