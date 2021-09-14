@@ -1,0 +1,20 @@
+/*chamar a funcao*/
+SELECT f_acha_apto('Faca');
+SELECT Amigos, Apartamento, f_acha_apto(Amigos) AS 'Andar'FROM TESTES_CURSOR;
+
+/*Criar a funcao*/
+
+CREATE DEFINER=`root`@`localhost` FUNCTION `f_acha_apto`(vAmigos VARCHAR(50)) RETURNS int
+BEGIN
+DECLARE vResposta INTEGER DEFAULT 0;
+CASE vAmigos
+WHEN 'Mãozinha'THEN SET vResposta = 6;
+WHEN 'Miguel'THEN SET vResposta = 6;
+WHEN 'Bariri'THEN SET vResposta = 6;
+WHEN 'Allan'THEN SET vResposta = 6;
+WHEN 'Gi'THEN SET vResposta = 3;
+WHEN 'Let'THEN SET vResposta = 3;
+ELSE SET vResposta = 00;
+END CASE;
+RETURN vResposta;
+END
