@@ -1,0 +1,13 @@
+CREATE DEFINER=`root`@`localhost` FUNCTION `f_morador_aleatorio`() RETURNS varchar(30) CHARSET utf8mb4
+BEGIN
+DECLARE vMorador Varchar(30);
+DECLARE vMaximo INT;
+DECLARE Aleatorio INT;
+SELECT COUNT(*) FROM PV INTO vMaximo;
+SET Aleatorio = f_aleatorio(0, vMaximo-1);
+SELECT Morador FROM PV LIMIT Aleatorio, 1 INTO vMorador;
+RETURN vMorador;
+END
+
+
+SELECT f_morador_aleatorio()
